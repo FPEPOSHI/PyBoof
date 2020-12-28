@@ -6,7 +6,10 @@ Since you might need to use this library in deployment, you will get an error: "
 
 To start using the library simply install the latest stable version using pip
 ```bash
-sudo pip3 install -e git+https://github.com/FPEPOSHI/PyBoof.git#egg=pyboof
+git clone https://github.com/FPEPOSHI/PyBoof pyboof-local
+cd pyboof-local
+./setup.py build
+sudo ./setup.py install
 ```
 
 # Supported Platforms
