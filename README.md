@@ -1,29 +1,13 @@
-PyBoof is [Python](http://www.python.org) wrapper for the computer vision library [BoofCV](http://boofcv.org). Since this is a Java library you will need to have java and javac installed.  The former is the Java compiler.  In the future the requirement for javac will be removed since a pre-compiled version of the Java code will be made available and automatically downloaded.  Installing the Java JDK is platform specific, so a quick search online should tell you how to do it.
+# Original Documentation 
+Check it here: [PyBoof](https://github.com/lessthanoptimal/PyBoof/)
+
+# Why?
+Since you might need to use this library in deployment, you will get an error: "ValueError: signal only works in main thread" because the lib is listening on cancel/close key. We will just disable this error by handling the exception thrown.
 
 To start using the library simply install the latest stable version using pip
 ```bash
-sudo pip3 install pyboof
+sudopip3 install -e git+https://github.com/FPEPOSHI/PyBoof.git#egg=pyboof
 ```
-
-# Installing From Source
-One advantage to checkout the source code and installing from source is that you also get all the example code and the example datasets.
-```bash
-git clone --recursive https://github.com/lessthanoptimal/PyBoof.git
-```
-
-If you forgot --recursive then you can checkout the data directory with the following command.
-
-```bash
-git submodule update --init --recursive
-```
-
-After you have the source code on your local machine you can install it and its dependencies with the following commands:
-
-1. cd PyBoof
-2. ./setup.py build
-3. sudo ./setup.py install
-
-Yes you do need to do the build first.  This will automatically build the Java jar and put it into the correct place.
 
 # Supported Platforms
 
