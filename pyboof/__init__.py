@@ -85,7 +85,11 @@ def signal_handler(signal, frame):
         pass
 
 
-signal.signal(signal.SIGINT, signal_handler)
+try:
+    signal.signal(signal.SIGINT, signal_handler)
+except ValueError as e:
+    print(e)
+    print('Ignoring Ctrl+C signals')
 
 # kill java on a regular exit too
 atexit.register(shutdown_jvm)
